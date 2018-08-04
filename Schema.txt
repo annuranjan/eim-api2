@@ -1,0 +1,97 @@
+personal: {
+	empCode:"", 
+	dob:"", 
+	gender:"", 
+	nationality:"", 
+	bloodGroup:"", 
+	maritalStatus:"", 
+	category:"", 
+	religion:'""
+},
+companyDetails:{
+	employeeStatus:"",
+	DateOfJoining:"",
+	DateOfLeaving:"",
+	Dept:",
+	Designation:"",
+	Salary:"",
+	manager:{empCode:""}
+},
+identity: {
+	passport:{
+		passNum:"",
+		yearOfIssue:"",
+		yearOfExpiry:""
+	},
+	otherIdentity:{
+		[
+			{idName:"", idNum:""},
+			{idName:"", idNum:""}
+		]
+	}
+}, 
+contact:{
+	address:{
+		address:"",
+		city:"",
+		state:"",
+		pincode:""
+	},
+	email:"",
+	phone:""
+}, 
+skills:{
+	languages:[],
+	trainings: {
+		trainingName:"",
+		dateOfCompletion:"",
+		passingGrade:""
+	}
+},
+family-emergency:{
+	family:[
+		{
+			name:"", 
+			relation:"",
+			age:"",
+			contactNum:""
+		}
+	],
+	emergency:[
+		{
+			name:"", 
+			relation:"", 
+			address:"",
+			city:"",
+			state:"",
+			phoneNum:""
+		}
+	],
+	nominee: [
+		{
+			name:"",
+			relation:"",
+			phoneNum:""
+		}
+	]
+	
+},
+experience: [
+	{
+		companyName:"",
+		designation:"", 
+		joiningDate:"",
+		leavingDate:"",
+		reasonForLeaving:"", 
+		jobDescription:"",
+		projectDesc:""
+	}
+], 
+education:[
+	{
+		qualification:"",
+		schoolName:"", 
+		passingYear:"",
+		passingGrade:""
+	}
+],
