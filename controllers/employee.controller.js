@@ -8,19 +8,8 @@ const Employee = require('../models/employee.model');
 // router.post('/employees/addEmployee', emp.addAnEmployee);
 
 exports.addAnEmployee = (req, res) => {
-    // if (!req.body.firstname || !req.body.lastname || !req.body.usertype || !req.body.domainname) {
-    //     res.status(400).send({
-    //         message: "Need [firstname, lastname, usertype, domainname] to register an employee!"
-    //     });
-    // }
-
-    const d = new Date();
-    const date_now = d.getDate() + "/" + d.getMonth() + "/" + d.getFullYear() + " " + d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds();
-    let newEmpCode = '';
-
     let emp = new Employee({
         _id: new mongoose.Types.ObjectId(),
-        empId: "",
         name: {
             firstname: req.body.firstname,
             middlename: req.body.middlename,
@@ -44,6 +33,15 @@ exports.addAnEmployee = (req, res) => {
     }).catch(error => {
         console.log(error);
         res.status(500).send(error);
+    });
+}
+
+exports.getAllEmployees = (req, res) => {
+    Employee.find({}).then(result => {
+        res.status(200).send(result)
+    }).catch(error => {
+        console.log(error);
+        res.status(500).send(error)
     });
 }
 // var nameSchema = new Schema({
